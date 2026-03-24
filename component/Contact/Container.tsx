@@ -7,7 +7,7 @@ export default function Container() {
   return (
     <>
     <Header />
-    <main className='pt-10'>
+    <main className='pt-10 pb-10'>
         <ContactUs />
     </main>
     <Footer />

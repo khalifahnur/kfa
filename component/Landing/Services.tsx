@@ -192,7 +192,7 @@ const FontLoader = () => (
 const CARDS = [
   {
     id: 0,
-    eyebrow: "Programme 01",
+    eyebrow: "Focus 01",
     title: "Football &\nEducation",
     titleDisplay: ["Football &", "Education"],
     desc: "Structured programmes that keep young people engaged in school while developing critical life skills through sport.",
@@ -203,7 +203,7 @@ const CARDS = [
   },
   {
     id: 1,
-    eyebrow: "Programme 02",
+    eyebrow: "Focus 02",
     title: "Child\nProtection",
     titleDisplay: ["Child", "Protection"],
     desc: "Comprehensive safeguarding frameworks ensuring every young person participates safely, with trained staff at every level.",
@@ -214,7 +214,7 @@ const CARDS = [
   },
   {
     id: 2,
-    eyebrow: "Programme 03",
+    eyebrow: "Focus 03",
     title: "Environmental\nSustainability",
     titleDisplay: ["Environmental", "Sustainability"],
     desc: "Embedding environmental awareness into all our activities and operations — from kit choices to programme delivery.",
@@ -228,7 +228,7 @@ const CARDS = [
 export default function FocusAreas() {
   const [active, setActive]     = useState(0);
   const [paused, setPaused]     = useState(false);
-  const [key,    setKey]        = useState(0);   // resets progress bar
+  const [key,    setKey]        = useState(0);  
 
   const go = useCallback((idx: number) => {
     setActive(idx);
@@ -290,8 +290,8 @@ export default function FocusAreas() {
                   className="focus-img absolute inset-0 bg-cover bg-center"
                   style={{ backgroundImage: `url(${card.img})` }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d]/90 via-[#0d0d0d]/30 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#1a5c38]/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#0d0d0d]/90 via-[#0d0d0d]/30 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-[#1a5c38]/20 to-transparent" />
               </motion.div>
             </AnimatePresence>
             <div className="absolute top-0 left-0 right-0 h-1 bg-blue-950 z-20" />
@@ -342,8 +342,6 @@ export default function FocusAreas() {
                   }`}>
                     <c.Icon size={18} color={isActive ? "#0d0d0d" : "#1a5c38"} />
                   </div>
-
-                  {/* text */}
                   <div className="flex flex-col gap-1 flex-1 min-w-0">
                     <span className={`font-playfair text-[17px] font-bold leading-snug transition-colors duration-300 ${
                       isActive ? "text-white" : "text-[#0d0d0d]"

@@ -105,7 +105,7 @@ export default function ContactUs() {
           <div className="mb-10">
             <label className="block text-[13px] font-semibold text-gray-800 mb-4">Select Subject</label>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-4">
-              {["Volunteer", "Donation", "General Inquiry"].map((item) => (
+              {["Partnerships","Volunteer", "Donation", "General Inquiry"].map((item) => (
                 <label key={item} className="flex items-center gap-x-2 cursor-pointer group">
                   <div className={`w-4 h-4 rounded-full flex items-center justify-center border transition-colors ${subject === item ? 'border-[#0E793C] bg-[#0E793C]' : 'border-gray-300 bg-gray-100 group-hover:border-[#0E793C]'}`}>
                     {subject === item && <div className="w-1.5 h-1.5 rounded-full bg-white" />}

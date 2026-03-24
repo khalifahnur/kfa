@@ -12,8 +12,8 @@ export default function MainContainer() {
       <MainHeader />
       <main className="bg-[#FAF9F5] ">
         <Home />
-        <Services />
         <AboutUsCard />
+        <Services />
         <PartnershipSection />
       </main>
       <Footer />
