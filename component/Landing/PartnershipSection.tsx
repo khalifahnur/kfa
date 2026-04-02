@@ -3,6 +3,15 @@ import Link from "next/link";
 
 const sponsors = [
   {
+    id: "3",
+    href: "https://www.lycaninternational.com/",
+    image: "/assets/lycan_logo.jpeg",
+    alt: "lycan",
+    text: "Lycan International",
+    isBold: true,
+    group: 3,
+  },
+  {
     id: "1",
     href: "https://www.murangaseal.com/",
     image: "/mseal-logo.png",
@@ -20,15 +29,7 @@ const sponsors = [
     isBold: true,
     group: 2,
   },
-  // {
-  //   id: "3",
-  //   href: "https://www.lycaninternational.com/",
-  //   image: "/assets/",
-  //   alt: "lycan",
-  //   text: "Lycan International",
-  //   isBold: true,
-  //   group: 2,
-  // },
+  
 ];
 
 export default function PartnershipSection() {
@@ -43,7 +44,7 @@ export default function PartnershipSection() {
 
         <div className="space-y-2">
           <div>
-            <div className="grid grid-cols-2">
+            <div className="grid grid-cols-3">
               {sponsors.map((partner) => (
                 <Link
                   href={partner.href}

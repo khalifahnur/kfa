@@ -87,7 +87,7 @@ export default function MainHeader() {
             ))}
           </div>
           <Link
-            href="/donate"
+            href="/contact"
             className="hidden md:inline-flex items-center gap-2 bg-[#c8e63a] text-[#0d0d0d] text-[13px] font-semibold tracking-widest uppercase px-6 py-3 transition-all duration-200 hover:bg-[#d9f54a] hover:gap-3"
           >
             Donate <ArrowUpRight className="w-4 h-4" />
@@ -136,7 +136,7 @@ export default function MainHeader() {
           </nav>
 
           <Link
-            href="/donate"
+            href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mobile-menu-enter inline-flex items-center gap-3 bg-[#c8e63a] text-[#0d0d0d] text-sm font-semibold tracking-widest uppercase px-10 py-4 hover:bg-[#d9f54a] transition-colors"
             style={{ animationDelay: '0.28s', opacity: 0 }}
