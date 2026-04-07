@@ -1,22 +1,18 @@
 import News from "@/component/News/News";
 import { getPayloadClient } from "@/lib/payloadClient";
-// import type { Metadata } from "next";
+import type { Metadata } from "next";
 
-// export const metadata: Metadata = {
-//   title: "Latest News | Murang’a Seal Football Club",
-//   description:
-//     "Stay updated with the latest news, match reports, player interviews, transfer updates, and behind-the-scenes stories from Murang’a Seal FC — your trusted source for everything Seal!",
-//   alternates: {
-//     canonical: "https://www.murangaseal.com/news",
-//   },
-//   openGraph: {
-//     title: "Latest News | Murang’a Seal FC",
-//     description:
-//       "Breaking news, match highlights, press releases, and exclusive stories from Murang’a Seal Football Club in the FKF Premier League.",
-//     url: "https://www.murangaseal.com/news",
-//     siteName: "Murang’a Seal FC",
-//   },
-// }
+export const metadata: Metadata = {
+  title: "News & Updates | Kits For Africa",
+  description:
+    "Stay updated with the latest news, stories, and impact reports from Kits For Africa. Read about our recent kit distributions, global partnerships, and inspiring stories from the field.",
+  openGraph: {
+    title: "Kits For Africa News | Latest Impact Stories & Announcements",
+    description:
+      "Follow our journey across the continent. Catch up on the latest press releases, success stories, and media highlights from our football equipment distributions.",
+    url: "https://www.kitsforafrica.org/news",
+  },
+};
 
 export const revalidate = 60;
 
