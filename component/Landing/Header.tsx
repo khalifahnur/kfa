@@ -35,15 +35,14 @@ const FontLoader = () => (
 );
 
 const NAV_LINKS = [
-  { label: "About Us",  href: "/about"    },
-  { label: "Programs",  href: "/programs" },
-  { label: "News",      href: "/news"     },
-  { label: "Contact",   href: "/contact"  },
+  { label: "About Us", href: "/about" },
+  { label: "Programs", href: "/programs" },
+  { label: "News", href: "/news" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function MainHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
 
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? "hidden" : "unset";
@@ -54,30 +53,35 @@ export default function MainHeader() {
       <FontLoader />
 
       <header
-        className={"font-dm fixed top-0 left-0 right-0 z-50 transition-all duration-500  bg-blue-950 backdrop-blur-md shadow-[0_4px_40px_rgba(0,0,0,0.4)] py-3 border-b border-white/5"
-            }
+        className={
+          "font-dm fixed top-0 left-0 right-0 z-50 transition-all duration-500  bg-blue-950 backdrop-blur-md shadow-[0_4px_40px_rgba(0,0,0,0.4)] py-3 border-b border-white/5"
+        }
       >
         <nav className="flex items-center justify-between max-w-7xl mx-auto px-6 sm:px-10">
           <Link href="/" className="inline-block w-fit group">
-                  <div className="bg-white transition-transform duration-300 group-hover:scale-105 shadow-lg">
-                    <Image
-                      src="/kfa_logo.png"
-                      alt="Kits For Africa Logo"
-                      width={120}
-                      height={40}
-                      className="object-contain h-12 md:h-16 w-auto"
-                    />
-                  </div>
-                </Link>
+            <div className="bg-white transition-transform duration-300 group-hover:scale-105 shadow-lg">
+              <Image
+                src="/kfa_logo.png"
+                alt="Kits For Africa Logo"
+                width={120}
+                height={40}
+                className="object-contain h-12 md:h-16 w-auto"
+              />
+            </div>
+          </Link>
           <div className="hidden md:flex items-center gap-10 text-xl text-white font-medium font-playfair">
             {NAV_LINKS.map(({ label, href }) => (
-              <Link key={href} href={href} className="nav-link transition-colors duration-200">
+              <Link
+                key={href}
+                href={href}
+                className="nav-link transition-colors duration-200"
+              >
                 {label}
               </Link>
             ))}
           </div>
           <Link
-            href="/donate"
+            href="/contact"
             className="hidden md:inline-flex items-center gap-2 bg-[#c8e63a] text-[#0d0d0d] text-[13px] font-semibold tracking-widest uppercase px-6 py-3 transition-all duration-200 hover:bg-[#d9f54a] hover:gap-3"
           >
             Donate <ArrowUpRight className="w-4 h-4" />
@@ -88,9 +92,11 @@ export default function MainHeader() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen
-              ? <X className="w-6 h-6" />
-              : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </nav>
       </header>
@@ -106,7 +112,7 @@ export default function MainHeader() {
           className="absolute inset-0 opacity-[0.04] pointer-events-none"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='white'/%3E%3C/svg%3E")`,
-            backgroundSize: '40px 40px',
+            backgroundSize: "40px 40px",
           }}
         />
 
@@ -126,10 +132,10 @@ export default function MainHeader() {
           </nav>
 
           <Link
-            href="/donate"
+            href="/contact"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mobile-menu-enter inline-flex items-center gap-3 bg-[#c8e63a] text-[#0d0d0d] text-sm font-semibold tracking-widest uppercase px-10 py-4 hover:bg-[#d9f54a] transition-colors"
-            style={{ animationDelay: '0.28s', opacity: 0 }}
+            style={{ animationDelay: "0.28s", opacity: 0 }}
           >
             Donate Now <ArrowUpRight className="w-5 h-5" />
           </Link>

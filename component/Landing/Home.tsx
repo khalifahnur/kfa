@@ -156,7 +156,7 @@ export default function Hero() {
               Our Programmes <ArrowRight size={15} />
             </a>
             <a
-              href="/donate"
+              href="/contact"
               className="inline-flex items-center gap-3 border border-white/30 text-white text-sm font-medium tracking-wide uppercase px-7 py-4 transition-all duration-200 hover:border-[#c8e63a] hover:text-[#c8e63a]"
             >
               Donate Now <ArrowUpRight size={15} />
