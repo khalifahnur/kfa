@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.www.kitsforafrica.org.com";
+  const baseUrl = "https://www.kitsforafrica.org.com";
   return [
     {
       url: `${baseUrl}/`,
